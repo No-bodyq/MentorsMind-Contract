@@ -15,7 +15,7 @@
     "local:seed": "bash scripts/seed-local.sh",
     "local:status": "docker-compose ps && echo '--- Horizon: http://localhost:8000' && echo '--- Soroban RPC: http://localhost:8003' && echo '--- Friendbot: http://localhost:8002'",
     "local:logs": "docker-compose logs -f",
-    "build": "cargo build --workspace --target wasm32-unknown-unknown --release",
+    "build": "node api.js && cargo build --workspace --target wasm32-unknown-unknown --release",
     "build:escrow": "cd escrow && cargo build --target wasm32-unknown-unknown --release",
     "build:verification": "cd contracts/verification && cargo build --target wasm32-unknown-unknown --release",
     "build:oracle": "cd contracts/oracle && cargo build --target wasm32-unknown-unknown --release",
